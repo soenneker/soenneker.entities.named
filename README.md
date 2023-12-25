@@ -8,5 +8,5 @@
 ## Installation
 
 ```
-Install-Package Soenneker.Entities.Named
+dotnet add package Soenneker.Entities.Named
 ```
