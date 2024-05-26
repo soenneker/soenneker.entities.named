@@ -13,7 +13,7 @@
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Entities.Named</AssemblyName>
         <PackageId>Soenneker.Entities.Named</PackageId>
-        <PackageTags>entity name domain c# .net dotnet</PackageTags>
+        <PackageTags>entity name domain c# .net dotnet namedentity</PackageTags>
         <Copyright>Copyright © 2023-2024 Jake Soenneker</Copyright>
         <Authors>Jake Soenneker</Authors>
         <Company>https://soenneker.com</Company>
