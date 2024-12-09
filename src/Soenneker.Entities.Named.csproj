@@ -39,6 +39,6 @@
 
         
 
-        <PackageReference Include="Soenneker.Entities.Entity" Version="3.0.411" />
+        <PackageReference Include="Soenneker.Entities.Entity" Version="3.0.412" />
     </ItemGroup>
 </Project>
