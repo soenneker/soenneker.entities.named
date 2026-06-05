@@ -9,6 +9,9 @@ namespace Soenneker.Entities.Named.Abstract;
 /// </summary>
 public interface INamedEntity : IEntity
 {
+    /// <summary>
+    /// Gets or sets name.
+    /// </summary>
     [JsonPropertyName("name")]
     [JsonProperty("name")]
     string Name { get; set; }
