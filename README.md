@@ -3,11 +3,22 @@
 [![](https://img.shields.io/nuget/dt/Soenneker.Entities.Named.svg?style=for-the-badge)](https://www.nuget.org/packages/Soenneker.Entities.Named/)
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.entities.named/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.entities.named/actions/workflows/codeql.yml)
 
-# ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Entities.Named
-### An Entity that also provides a name property
+# Soenneker.Entities.Named
 
-## Installation
+Essentially just provides `Name` string property.
 
-```
+## Install
+
+```bash
 dotnet add package Soenneker.Entities.Named
 ```
+
+## What you get
+
+- `INamedEntity` — Essentially just provides `Name` string property.
+
+## API at a glance
+
+| API | What it does | Result / important behavior |
+| --- | --- | --- |
+| `INamedEntity.Name` | Gets or sets name. | Gets or sets name. |
