@@ -5,7 +5,7 @@
 
 # Soenneker.Entities.Named
 
-Essentially just provides `Name` string property.
+Adds a mutable, virtual `Name` property to the base entity identity and audit fields.
 
 ## Install
 
@@ -13,12 +13,27 @@ Essentially just provides `Name` string property.
 dotnet add package Soenneker.Entities.Named
 ```
 
-## What you get
+## Derive a named entity
 
-- `INamedEntity` — Essentially just provides `Name` string property.
+```csharp
+using Soenneker.Entities.Named;
 
-## API at a glance
+public sealed class ProductCategory : NamedEntity
+{
+    public string? Description { get; set; }
+}
 
-| API | What it does | Result / important behavior |
-| --- | --- | --- |
-| `INamedEntity.Name` | Gets or sets name. | Gets or sets name. |
+var category = new ProductCategory
+{
+    Id = Guid.NewGuid().ToString("N"),
+    Name = "Office supplies",
+    Description = "Paper, stationery, and desk accessories",
+    CreatedAt = DateTimeOffset.UtcNow
+};
+```
+
+`NamedEntity` derives from `Soenneker.Entities.Entity.Entity` and implements `INamedEntity`. Implement `INamedEntity` directly when your domain type already has another base class.
+
+The package does not assign, trim, normalize, localize, or require uniqueness for `Name`; those remain application rules. `Id`, `Name`, and `CreatedAt` must be assigned by the caller to avoid their CLR defaults.
+
+The serialized property names are `id`, `name`, `createdAt`, and `modifiedAt` with both `System.Text.Json` and Newtonsoft.Json. Null omission follows the selected serializer settings.

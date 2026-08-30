@@ -4,13 +4,13 @@ using Soenneker.Entities.Entity.Abstract;
 
 namespace Soenneker.Entities.Named.Abstract;
 
-/// <summary>Essentially just provides <see cref="Name"/> string property.
-///<inheritdoc cref="IEntity"/>
+/// <summary>
+/// Extends <see cref="IEntity"/> with an application-defined display or domain name.
 /// </summary>
 public interface INamedEntity : IEntity
 {
     /// <summary>
-    /// Gets or sets name.
+    /// Gets or sets the entity's name.
     /// </summary>
     [JsonPropertyName("name")]
     [JsonProperty("name")]

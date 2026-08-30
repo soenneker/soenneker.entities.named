@@ -4,7 +4,6 @@ using Soenneker.Entities.Named.Abstract;
 
 namespace Soenneker.Entities.Named;
 
-/// <inheritdoc cref="INamedEntity"/>
 public class NamedEntity : Entity.Entity, INamedEntity
 {
     [JsonPropertyName("name")]
