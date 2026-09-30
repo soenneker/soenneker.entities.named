@@ -36,4 +36,4 @@ var category = new ProductCategory
 
 The package does not assign, trim, normalize, localize, or require uniqueness for `Name`; those remain application rules. `Id`, `Name`, and `CreatedAt` must be assigned by the caller to avoid their CLR defaults.
 
-The serialized property names are `id`, `name`, `createdAt`, and `modifiedAt` with both `System.Text.Json` and Newtonsoft.Json. Null omission follows the selected serializer settings.
+The serialized property names are `id`, `name`, `createdAt`, and `modifiedAt` with `System.Text.Json`. Null omission follows the selected serializer settings.

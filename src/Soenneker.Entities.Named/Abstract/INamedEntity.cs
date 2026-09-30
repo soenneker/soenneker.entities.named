@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using Newtonsoft.Json;
 using Soenneker.Entities.Entity.Abstract;
 
 namespace Soenneker.Entities.Named.Abstract;
@@ -13,6 +12,5 @@ public interface INamedEntity : IEntity
     /// Gets or sets the entity's name.
     /// </summary>
     [JsonPropertyName("name")]
-    [JsonProperty("name")]
     string Name { get; set; }
 }
